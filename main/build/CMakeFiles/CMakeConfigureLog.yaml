@@ -1,0 +1,477 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt"
+    message: |
+      The system is: Linux - 5.4.0-99-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/3.26.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/3.26.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-eynqTX"
+      binary: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-eynqTX"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-eynqTX
+        
+        Run Build Command(s):/usr/bin/ninja -v cmTC_12828 && [1/2] /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc   -v -o CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc
+        Target: aarch64-linux-android
+        Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold
+        Thread model: posix
+        gcc version 4.9.x 20150123 (prerelease) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/cc1 -quiet -v -iprefix /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/ -isysroot /home/kemp/work/ndk/toolchains/bin/../sysroot /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCCompilerABI.c -mbionic -fpic -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc3adJFr.s
+        GNU C (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)
+        	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"
+        ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include"
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/local/include"
+        ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include-fixed"
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed
+         /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include
+        End of search list.
+        GNU C (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)
+        	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: c5526b0cb4781ad08129426dbc3d7be4
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o /tmp/cc3adJFr.s
+        GNU assembler version 2.27.0 (aarch64-linux-android) using BFD version (binutils-2.27-bf0c2e8) 2.27.0.20170315
+        COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/
+        LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+        [2/2] : && /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc  -v  -rdynamic CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -o cmTC_12828   && :
+        Using built-in specs.
+        COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc
+        COLLECT_LTO_WRAPPER=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper
+        Target: aarch64-linux-android
+        Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold
+        Thread model: posix
+        gcc version 4.9.x 20150123 (prerelease) (GCC) 
+        COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/
+        LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12828' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2 -plugin /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so -plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBnQ75s.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -o cmTC_12828 /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -lgcc -lc -ldl -lgcc /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include]
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+          add: [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include]
+        end of search list found
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/include]
+        implicit include dirs: [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include;/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include-fixed;/home/kemp/work/ndk/toolchains/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-eynqTX]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja -v cmTC_12828 && [1/2] /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc   -v -o CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc]
+        ignore line: [Target: aarch64-linux-android]
+        ignore line: [Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.9.x 20150123 (prerelease) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/cc1 -quiet -v -iprefix /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/ -isysroot /home/kemp/work/ndk/toolchains/bin/../sysroot /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCCompilerABI.c -mbionic -fpic -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc3adJFr.s]
+        ignore line: [GNU C (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)]
+        ignore line: [	compiled by GNU C version 4.8  GMP version 5.0.5  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"]
+        ignore line: [ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include"]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)]
+        ignore line: [	compiled by GNU C version 4.8  GMP version 5.0.5  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: c5526b0cb4781ad08129426dbc3d7be4]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o /tmp/cc3adJFr.s]
+        ignore line: [GNU assembler version 2.27.0 (aarch64-linux-android) using BFD version (binutils-2.27-bf0c2e8) 2.27.0.20170315]
+        ignore line: [COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/]
+        ignore line: [LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [[2/2] : && /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc  -v  -rdynamic CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -o cmTC_12828   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper]
+        ignore line: [Target: aarch64-linux-android]
+        ignore line: [Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.9.x 20150123 (prerelease) (GCC) ]
+        ignore line: [COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/]
+        ignore line: [LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12828' '-mlittle-endian' '-mabi=lp64']
+        link line: [ /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2 -plugin /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so -plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBnQ75s.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -o cmTC_12828 /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o -lgcc -lc -ldl -lgcc /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o]
+          arg [/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccBnQ75s.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-ldl] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker64] ==> ignore
+          arg [-X] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-maarch64linux] ==> ignore
+          arg [--fix-cortex-a53-835769] ==> ignore
+          arg [--fix-cortex-a53-843419] ==> ignore
+          arg [-znoexecstack] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_12828] ==> ignore
+          arg [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o] ==> obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib] ==> dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib]
+          arg [CMakeFiles/cmTC_12828.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o] ==> obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o]
+        collapse obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtbegin_dynamic.o]
+        collapse obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtend_android.o]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc] ==> [/home/kemp/work/ndk/toolchains/lib/gcc]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib64]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib]
+        implicit libs: [gcc;c;dl;gcc]
+        implicit objs: [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtbegin_dynamic.o;/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtend_android.o]
+        implicit dirs: [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x;/home/kemp/work/ndk/toolchains/lib/gcc;/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib64;/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib;/home/kemp/work/ndk/toolchains/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-kU6UbW"
+      binary: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-kU6UbW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-kU6UbW
+        
+        Run Build Command(s):/usr/bin/ninja -v cmTC_8df2e && [1/2] /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++   -v -o CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++
+        Target: aarch64-linux-android
+        Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold
+        Thread model: posix
+        gcc version 4.9.x 20150123 (prerelease) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/cc1plus -quiet -v -iprefix /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/ -isysroot /home/kemp/work/ndk/toolchains/bin/../sysroot -D_GNU_SOURCE /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -mbionic -fpic -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -version -fexceptions -frtti -o /tmp/ccFqPuJv.s
+        GNU C++ (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)
+        	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"
+        ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include"
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/local/include"
+        ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include-fixed"
+        ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/aarch64-linux-android
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/backward
+         /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include
+        End of search list.
+        GNU C++ (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)
+        	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 33ce5a3d21f67555d44faff4891662f7
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFqPuJv.s
+        GNU assembler version 2.27.0 (aarch64-linux-android) using BFD version (binutils-2.27-bf0c2e8) 2.27.0.20170315
+        COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/
+        LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64'
+        [2/2] : && /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++  -v  -rdynamic CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8df2e   && :
+        Using built-in specs.
+        COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++
+        COLLECT_LTO_WRAPPER=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper
+        Target: aarch64-linux-android
+        Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold
+        Thread model: posix
+        gcc version 4.9.x 20150123 (prerelease) (GCC) 
+        COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/
+        LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_8df2e' '-mlittle-endian' '-mabi=lp64'
+         /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2 -plugin /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so -plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper -plugin-opt=-fresolution=/tmp/ccY7lPPy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -o cmTC_8df2e /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lc -ldl -lgcc /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include]
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x]
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/aarch64-linux-android]
+          add: [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/backward]
+          add: [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include]
+        end of search list found
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x] ==> [/home/kemp/work/ndk/toolchains/include/c++/4.9.x]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/aarch64-linux-android] ==> [/home/kemp/work/ndk/toolchains/include/c++/4.9.x/aarch64-linux-android]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/backward] ==> [/home/kemp/work/ndk/toolchains/include/c++/4.9.x/backward]
+        collapse include dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/include]
+        implicit include dirs: [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include;/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x/include-fixed;/home/kemp/work/ndk/toolchains/include/c++/4.9.x;/home/kemp/work/ndk/toolchains/include/c++/4.9.x/aarch64-linux-android;/home/kemp/work/ndk/toolchains/include/c++/4.9.x/backward;/home/kemp/work/ndk/toolchains/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-kU6UbW]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja -v cmTC_8df2e && [1/2] /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++   -v -o CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++]
+        ignore line: [Target: aarch64-linux-android]
+        ignore line: [Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.9.x 20150123 (prerelease) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/cc1plus -quiet -v -iprefix /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/ -isysroot /home/kemp/work/ndk/toolchains/bin/../sysroot -D_GNU_SOURCE /snap/cmake/1299/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -mbionic -fpic -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -version -fexceptions -frtti -o /tmp/ccFqPuJv.s]
+        ignore line: [GNU C++ (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)]
+        ignore line: [	compiled by GNU C version 4.8  GMP version 5.0.5  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"]
+        ignore line: [ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include"]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/include-fixed]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/aarch64-linux-android]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/../../include/c++/4.9.x/backward]
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++ (GCC) version 4.9.x 20150123 (prerelease) (aarch64-linux-android)]
+        ignore line: [	compiled by GNU C version 4.8  GMP version 5.0.5  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 33ce5a3d21f67555d44faff4891662f7]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [ /home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFqPuJv.s]
+        ignore line: [GNU assembler version 2.27.0 (aarch64-linux-android) using BFD version (binutils-2.27-bf0c2e8) 2.27.0.20170315]
+        ignore line: [COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/]
+        ignore line: [LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlittle-endian' '-mabi=lp64']
+        ignore line: [[2/2] : && /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++  -v  -rdynamic CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8df2e   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper]
+        ignore line: [Target: aarch64-linux-android]
+        ignore line: [Configured with: /buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --target=aarch64-linux-android --host=x86_64-linux-gnu --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --enable-bionic-libs --enable-libatomic-ifuncs=no --enable-initfini-array --disable-nls --prefix=/tmp/d2087558cf57fc8b596d8eebe6b67058 --with-sysroot=/tmp/d2087558cf57fc8b596d8eebe6b67058/sysroot --with-binutils-version=2.27 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/d2087558cf57fc8b596d8eebe6b67058/include/c++/4.9.x --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-ld=default --enable-threads --enable-eh-frame-hdr-for-static --enable-fix-cortex-a53-835769 --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --program-transform-name='s&^&aarch64-linux-android-&' --enable-gold]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.9.x 20150123 (prerelease) (GCC) ]
+        ignore line: [COMPILER_PATH=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/]
+        ignore line: [LIBRARY_PATH=/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64/:/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/:/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_8df2e' '-mlittle-endian' '-mabi=lp64']
+        link line: [ /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2 -plugin /home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so -plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper -plugin-opt=-fresolution=/tmp/ccY7lPPy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -o cmTC_8df2e /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lc -ldl -lgcc /home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o]
+          arg [/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kemp/work/ndk/toolchains/bin/../libexec/gcc/aarch64-linux-android/4.9.x/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccY7lPPy.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-ldl] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/kemp/work/ndk/toolchains/bin/../sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker64] ==> ignore
+          arg [-X] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-maarch64linux] ==> ignore
+          arg [--fix-cortex-a53-835769] ==> ignore
+          arg [--fix-cortex-a53-843419] ==> ignore
+          arg [-znoexecstack] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8df2e] ==> ignore
+          arg [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o] ==> obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib]
+          arg [-L/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib] ==> dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib]
+          arg [CMakeFiles/cmTC_8df2e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o] ==> obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o]
+        collapse obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtbegin_dynamic.o] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtbegin_dynamic.o]
+        collapse obj [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib/crtend_android.o] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtend_android.o]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x] ==> [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc] ==> [/home/kemp/work/ndk/toolchains/lib/gcc]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib64]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib]
+        collapse library dir [/home/kemp/work/ndk/toolchains/bin/../sysroot/usr/lib] ==> [/home/kemp/work/ndk/toolchains/sysroot/usr/lib]
+        implicit libs: [stdc++;m;gcc;c;dl;gcc]
+        implicit objs: [/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtbegin_dynamic.o;/home/kemp/work/ndk/toolchains/sysroot/usr/lib/crtend_android.o]
+        implicit dirs: [/home/kemp/work/ndk/toolchains/lib/gcc/aarch64-linux-android/4.9.x;/home/kemp/work/ndk/toolchains/lib/gcc;/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib64;/home/kemp/work/ndk/toolchains/aarch64-linux-android/lib;/home/kemp/work/ndk/toolchains/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake:83 (_record_compiler_features)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake:121 (_record_compiler_features_cxx)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "/snap/cmake/1299/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-4sLTEW"
+      binary: "/home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-4sLTEW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-4sLTEW
+        
+        Run Build Command(s):/usr/bin/ninja -v cmTC_95582 && [1/2] /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++   -std=c++14 -o CMakeFiles/cmTC_95582.dir/feature_tests.cxx.o -c /home/kemp/work/esp_new/DesktopScreenV3.0.0/main/build/CMakeFiles/CMakeScratch/TryCompile-4sLTEW/feature_tests.cxx
+        [2/2] : && /home/kemp/work/ndk/toolchains/bin/aarch64-linux-android-g++  -rdynamic CMakeFiles/cmTC_95582.dir/feature_tests.cxx.o -o cmTC_95582   && :
+        
+      exitCode: 0
+...
