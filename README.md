@@ -1,30 +1,26 @@
+## QuickStart
 
-## 配置环境
+1. Clone this repository
+```bash
+git clone https://github.com/nsry123/MedMinder
+cd ./MedMinder
+```
+
+2. Configure ESPIDF Environment and Project
+```bash
 get_idf
-
-## 配置 
 idf.py menuconfig
+```
+Please ensure that the flash size is set to 4MB
 
-## 编译
- idf.py build
+3. Download Font to ESP32
+```bash
+python esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 115200 write_flash -z 0x15D000 myFont.bin
+```
 
-## 清除
-idf.py fullclean
-
-## 下载
+4. Build and Flash
+ ```bash
+idf.py build
 idf.py -p /dev/ttyUSB0 flash
-
-## 监视器
-idf.py -p /dev/ttyUSB0 monitor
-
-## 构建、下载、监视
-idf.py -p /dev/ttyUSB0 flash monitor
-
-## 擦除
-idf.py -p /dev/ttyUSB0 erase-flash
-
-## 编译成功提示
-Project build complete.
-
-## 字体库下载
-python esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 115200 write_flash -z 0x15D000 myFont1.bin
+```
+After flashing, restart the ESP32 and you are good to go!
