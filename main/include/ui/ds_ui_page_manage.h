@@ -22,6 +22,7 @@ typedef enum{
 	PAGE_TYPE_MEDBOX_DETAIL,
 	PAGE_TYPE_MEDBOX_LIST,
 	PAGE_TYPE_MEDBOX_QRCODE,
+	PAGE_TYPE_ALARM,
 }PAGE_TYPE_E;
 
 typedef struct
@@ -33,6 +34,7 @@ PAGE_TYPE_E ds_ui_get_now_show_page(void);
 void ds_ui_page_manage_send_event(TP_ACTION_E key,uint8_t touch_x,uint8_t touch_y);
 void ds_ui_page_manage_send_action(PAGE_TYPE_E action);
 void ds_ui_page_manage_init(void);
+void set_current_page_type(PAGE_TYPE_E type);
 
 
 #endif

@@ -1,4 +1,4 @@
-/* * Data converted from /Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/main/setting.html
+/* * Data converted from /Users/sunzeyuan/Downloads/MedMinder/main/setting.html
  */
 .data
 .section .rodata.embedded

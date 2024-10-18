@@ -173,7 +173,7 @@ static void background_task(void* arg)
         //     //重置10min计时
         //     apsta_close_count = (SLEEP_TIME_RESET - 10);
         // }
-        if(apsta_close_count > 0){
+        if(apsta_close_count > 0 && ds_ui_get_now_show_page()!=PAGE_TYPE_ALARM){
             // printf("------------------condition4");
             apsta_close_count --;
             if(apsta_close_count == 0){//如果倒计时为0
@@ -200,7 +200,7 @@ static void background_task(void* arg)
 
 void app_main(void)
 {
-    WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
+    // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
 
     printf("----- app start! -----\n");
 
@@ -252,28 +252,28 @@ void app_main(void)
 
 
     ds_ui_weather_init();
-    ds_ui_medbox_listpage_init();
+    
     ds_ui_wordpage_init();
     ds_ui_wordpage_init();
     ds_ui_tomatopage_init();
     ds_ui_fans_init();
     ds_ui_medbox_qrcodepage_init();
-
-
+    
 
     //定时器初始化
     //设定刷新任务 ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
     ds_timer_init();
     //PWM蜂鸣器初始化
     ds_pwm_init();
+    ds_ui_page_manage_send_action(PAGE_TYPE_MEDBOX_MAIN);
     
+    ds_ui_medbox_listpage_init();
 
     //默认Wifi账号密码设置
     // char *ssid="notifier";
     // char *psw="notifier_123";
     // ds_nvs_save_wifi_info(ssid,psw);
-    ds_ui_page_manage_send_action(PAGE_TYPE_MEDBOX_MAIN);
-
+    
     //启动AP&STA模式
     vTaskDelay(2000 / portTICK_PERIOD_MS);
     // ds_wifi_send_event(AP_STA_START);

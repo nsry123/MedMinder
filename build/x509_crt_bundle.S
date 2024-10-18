@@ -1,4 +1,4 @@
-/* * Data converted from /Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/sunzeyuan/Downloads/MedMinder/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

@@ -29,9 +29,11 @@
         "future": "c",
         "istream": "c",
         "ostream": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "param.h": "c",
+        "esp_timer.h": "c"
     },
     "idf.portWin": "COM4",
     "idf.flashType": "UART",
-    "idf.port": "/dev/tty.usbserial-2140"
+    "idf.port": "/dev/tty.usbserial-210"
 }

@@ -26,6 +26,12 @@ typedef struct
 
 QueueHandle_t ui_event_queue;
 
+void set_current_page_type(PAGE_TYPE_E type){
+	g_page_manage.now_show_page = type;
+}
+
+
+
 //TP点击事件
 void ds_ui_page_manage_send_event(TP_ACTION_E key,uint8_t touch_x,uint8_t touch_y){
 	UI_EVENT_T evt;
@@ -36,7 +42,7 @@ void ds_ui_page_manage_send_event(TP_ACTION_E key,uint8_t touch_x,uint8_t touch_
 		if(evt.touch_x < 75){
 			if(evt.touch_y < 75){
 				//时钟
-				evt.action = PAGE_TYPE_TIME;
+				// evt.action = PAGE_TYPE_TIME;
 			}else{
 				//二维码
 				evt.action = PAGE_TYPE_MEDBOX_QRCODE;
@@ -44,7 +50,7 @@ void ds_ui_page_manage_send_event(TP_ACTION_E key,uint8_t touch_x,uint8_t touch_
 		}else{
 			if(evt.touch_y < 75){
 				//天气
-				evt.action = PAGE_TYPE_WEATHER;
+				// evt.action = PAGE_TYPE_WEATHER;
 			}else{
 				//番茄时钟
 				evt.action = PAGE_TYPE_MEDBOX_LIST;
@@ -75,6 +81,7 @@ static void ui_page_evt_task(void *arg)
 			g_page_manage.now_show_page = PAGE_TYPE_MEDBOX_MAIN;
 			ds_screen_display_medbox_mainpage();
 		}
+		stop_alarm();
 		// }else if(evt.action == PAGE_TYPE_SETTING){
 		// 	g_page_manage.now_show_page = PAGE_TYPE_SETTING;
 		// 	ds_screen_setting();
@@ -144,6 +151,12 @@ static void ui_page_evt_task(void *arg)
 				
 				if(g_page_manage.now_show_page == PAGE_TYPE_MEDBOX_LIST && get_list_status() == VIEW_DETAIL){
 					ds_ui_medbox_listpage_display_init();
+				}else if(g_page_manage.now_show_page == PAGE_TYPE_ALARM){
+					g_page_manage.now_show_page = PAGE_TYPE_MEDBOX_MAIN;
+					stop_alarm();
+					// ds_screen_display_main();
+					// printf("------------------------------------------------returnning to home---------------------------------------");
+					ds_screen_display_medbox_mainpage();
 				}else{
 					if(g_page_manage.now_show_page == PAGE_TYPE_MEDBOX_QRCODE){
 						// ds_wifi_send_event(AP_STA_STOP);

@@ -39,11 +39,19 @@ typedef enum{
     VIEW_DETAIL
 }LIST_STATUS_T;
 
+typedef struct {
+    char* name;
+    char* time;
+    int dose_per_time;
+    char* unit;
+}ALARM_DATA_T;
+
 void ds_ui_medbox_listpage_init(void);
 void ds_ui_medbox_listpage_display_init(void);
 void listpage_move_up(void);
 void listpage_move_down(void);
 void handle_click(int type);
+void stop_alarm();
 LIST_STATUS_T get_list_status();
 
 

@@ -139,7 +139,7 @@
     "ESP_AP_MAX_STA_CONN": 4,
     "ESP_AP_WIFI_CHANNEL": 11,
     "ESP_AP_WIFI_PASSWORD": "notifier_123",
-    "ESP_AP_WIFI_SSID": "MedBoxNotifier",
+    "ESP_AP_WIFI_SSID": "MedMinder",
     "ESP_BROWNOUT_DET": true,
     "ESP_BROWNOUT_DET_LVL": 0,
     "ESP_BROWNOUT_DET_LVL_SEL_0": true,

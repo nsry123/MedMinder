@@ -1347,7 +1347,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/sunzeyuan/.espressif/tools/cmake/3.24.0/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3" -B"/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build"
+  command = /Users/sunzeyuan/.espressif/tools/cmake/3.24.0/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/sunzeyuan/Downloads/MedMinder -B/Users/sunzeyuan/Downloads/MedMinder/build
   description = Re-running CMake...
   generator = 1
 

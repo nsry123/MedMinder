@@ -4,12 +4,15 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "sdkconfig.h"
-
+#include "ds_ui_page_manage.h"
 #include "ds_screen.h"
 #include "ds_paint.h"
 #include "ds_ui_mainpage.h"
 #include "ds_system_data.h"
 #include "ds_spi.h"
+#include "ds_pwm.h"
+#include "ds_timer.h"
+#include "esp_timer.h"
 
 #include "ds_data_page.h"
 #include "ds_wifi_ap_sta.h"
@@ -28,6 +31,8 @@
 #include "ds_system_data.h"
 #include "ds_data_num.h"
 #include "ds_data_icon.h"
+
+volatile bool screen_clicked = true;
 
 typedef enum{
     VIEW_LIST,
@@ -50,6 +55,16 @@ typedef struct
     uint8_t partial_update_time;
 }LIST_PAGE_T;
 
+typedef struct {
+    char* name;
+    char* time;
+    int dose_per_time;
+    char* unit;
+}ALARM_DATA_T;
+
+esp_timer_handle_t beep_timer = NULL;
+esp_timer_handle_t clock_timer = NULL;
+
 typedef struct{
     char* name;
     char* time;
@@ -57,9 +72,105 @@ typedef struct{
     int dose_per_time;
 }MEDICINE_SORT_T;
 
+void beep_timer_callback(void *arg) {
+    if (!screen_clicked) {
+        send_beep_event_from_isr(BEEP_LONG);
+    } else {
+        // ESP_LOGI(TAG, "Screen clicked, stopping beep");
+        esp_timer_stop(beep_timer);  // Stop the timer if screen was clicked
+    }
+}
+
+
+
+int64_t calculate_time_until_alarm(int hour, int min)
+{
+    time_t now;
+    struct tm timeinfo_now;
+    struct tm timeinfo;
+    time(&now);
+    localtime_r(&now, &timeinfo);
+
+    timeinfo_now.tm_hour = 10;
+    timeinfo_now.tm_min = 10;
+
+
+    // Set the alarm time to 14:00 (2 PM)
+    timeinfo.tm_hour = hour;
+    timeinfo.tm_min = min;
+    timeinfo.tm_sec = 0;
+    // Get the future alarm time (for today or the next day)
+    time_t alarm_time = mktime(&timeinfo);
+
+
+    // If the alarm time has already passed today, set it for the next day
+    if (alarm_time < now)
+    {
+        alarm_time += 86400; // Add 24 hours
+    }
+
+    return 7e7; // Return time in microseconds
+}
+
+
+
+void display_alarm_page(char* name, char* time, char* unit, int dose_per_time){
+    uint8_t *m_alarm_image;
+    m_alarm_image = (uint8_t *)malloc(IMAGE_SIZE);
+    
+    int dose_str_len = snprintf(NULL, 0, "%d%s", dose_per_time, unit) + 1;  // +1 for null terminator
+    char *dose = (char *)malloc(dose_str_len);
+    
+    // Safely format the string
+    snprintf(dose, dose_str_len, "%d%s", dose_per_time, unit);
+
+    Paint_NewImage(m_alarm_image, EPD_2IN9BC_WIDTH, EPD_2IN9BC_HEIGHT, 0, WHITE);
+    Paint_SelectImage(m_alarm_image);
+    Paint_Clear(WHITE);
+    Paint_DrawLine(0,100,200,100,BLACK,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+    Paint_DrawString_CN_scaled(5, 95, "药品1", WHITE, BLACK,1.8);
+    Paint_DrawString_CN_scaled(5, 45, "10:11", WHITE, BLACK,1.8);
+    Paint_DrawString_CN_scaled(5, 145, "3片", WHITE, BLACK,1.8);
+    Paint_DrawString_CN_scaled(5, 190, "停止警报", WHITE, BLACK,1.8);
+    ds_screen_full_display(ds_paint_image_new);
+    // while(alarm_start < 1000){
+    //     alarm_start += 1;
+    //     send_beep_event_from_isr(BEEP_LONG);
+    //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    // }
+    const esp_timer_create_args_t beep_timer_args = {
+        .callback = &beep_timer_callback,
+        .arg = &beep_timer,  // Pass the timer handle to the callback
+        .name = "beep_timer"
+    };
+
+    esp_timer_create(&beep_timer_args, &beep_timer);
+
+    // Start the timer to beep every 1000ms (1 second)
+    esp_timer_start_periodic(beep_timer, 1000000);
+}
+
+
+void stop_alarm(){
+    screen_clicked = true;
+}
+
+void alarm_callback(void *arg)
+{
+    screen_clicked = false;
+    set_current_page_type(PAGE_TYPE_ALARM);
+    send_beep_event_from_isr(BEEP_LONG);
+    ALARM_DATA_T* data = (ALARM_DATA_T *) arg;
+    display_alarm_page(data->name,data->time,data->unit,data->dose_per_time);
+    ESP_LOGI("123", "Alarm triggered at 14:00");
+}
+
+
+
 //200*200 像素屏幕适配，偏移值
 static int offset_v = 29; 
-static int offset_h = 24; 
+static int offset_h = 24;
+
 
 LIST_PAGE_T g_list_page;
 MEDICINE_SORT_T *medicine_sort_list;// = malloc(50 * sizeof(MEDICINE_SORT_T));
@@ -71,16 +182,51 @@ void ds_ui_medbox_listpage_init(){
     g_list_page.minute = 37;
     g_list_page.page = 0;
     g_list_page.intake_num = 0;
+    ALARM_DATA_T data = {"测试","12:30",1,"片"};
+    printf("Medbox Init Called");
+    // alarm_callback((void *)&data);
+    int64_t time_until_alarm = calculate_time_until_alarm(10,11);
+    const esp_timer_create_args_t alarm_timer_args = {
+        .callback = &alarm_callback,
+        .arg = (void *)&data,
+        .name = "daily_alarm"};
+    // esp_timer_create(&alarm_timer_args, &clock_timer);
+    // esp_timer_start_once(clock_timer, time_until_alarm);
+    // printf("%s",cJSON_Print(get_system_data().medicine_json));
 }
 
+
+
+// void get_medicine_sort_list
+
 void ds_ui_medbox_listpage_display_update(){
+    // printf("%s",cJSON_Print(get_system_data().medicine_json));
     g_list_page.updateing = 1;
 
     int max_pages = (g_list_page.intake_num + 1) / 2;
     int progress_line_length = (int) (200.0/max_pages);
+    uint8_t *m_custom_image;
+    m_custom_image = (uint8_t *)malloc(IMAGE_SIZE);
 
     int pagenum = (int) g_list_page.page;
     printf("------------------Page Number: %d----------------\n",pagenum);
+    if(g_list_page.intake_num == 0){
+        Paint_NewImage(m_custom_image, EPD_2IN9BC_WIDTH, EPD_2IN9BC_HEIGHT, 0, WHITE);
+        Paint_SelectImage(m_custom_image);
+        Paint_Clear(WHITE);
+        char* text = "阿";
+        Paint_DrawLine(0,100,200,100,BLACK,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+
+        int progress_bar_start = (int) (g_list_page.page*progress_line_length);
+        int progress_bar_end = (int) ((g_list_page.page+1)*progress_line_length);
+
+        // Paint_DrawLine(195,progress_bar_start,195,progress_bar_end,BLACK,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+        // Paint_DrawString_CN_scaled(30, 50, med1_time, WHITE, BLACK,1.5);
+        Paint_DrawString_CN_scaled(5, 95, "无数据", WHITE, BLACK,1.8);
+        ds_screen_full_display(ds_paint_image_new);
+        // Paint_DrawString_CN_scaled(5, 45, med1_time, WHITE, BLACK,1.8);
+        return;
+    }
     char *med1_name = medicine_sort_list[pagenum*2].name;
     char *med1_time = medicine_sort_list[pagenum*2].time;
     char *med2_name = NULL;
@@ -106,8 +252,7 @@ void ds_ui_medbox_listpage_display_update(){
 	int vertical = 0; //垂直位置
     int horizontal = 0;  //水平位置
     int now_index;
-    uint8_t *m_custom_image;
-    m_custom_image = (uint8_t *)malloc(IMAGE_SIZE);
+    
 
     
     Paint_NewImage(m_custom_image, EPD_2IN9BC_WIDTH, EPD_2IN9BC_HEIGHT, 0, WHITE);
@@ -182,21 +327,27 @@ void ds_ui_medbox_listpage_display_update(){
 }
 
 void listpage_move_up(){
-    int max_pages = (g_list_page.intake_num + 1) / 2;
-    printf("----------------MaxPage:%d----------------",max_pages);
-    if(g_list_page.page >= max_pages-1){
-        return;
+    if(g_list_page.status != VIEW_DETAIL){
+        int max_pages = (g_list_page.intake_num + 1) / 2;
+        printf("----------------MaxPage:%d----------------",max_pages);
+        if(g_list_page.page >= max_pages-1){
+            return;
+        }
+        g_list_page.page++;
+        ds_ui_medbox_listpage_display_update();
     }
-    g_list_page.page++;
-    ds_ui_medbox_listpage_display_update();
+    
 }
 
 void listpage_move_down(){
-    if(g_list_page.page <= 0){
-        return;
+    if(g_list_page.status != VIEW_DETAIL){
+        if(g_list_page.page <= 0){
+            return;
+        }
+        g_list_page.page--;
+        ds_ui_medbox_listpage_display_update();
+        // const mother is the ony
     }
-    g_list_page.page--;
-    ds_ui_medbox_listpage_display_update();
 }
 
 int cmp(const void *a, const void *b) {
@@ -210,11 +361,12 @@ LIST_STATUS_T get_list_status(){
 }
 
 
+
 void handle_click(int type){
     int pagenum = (int) g_list_page.page;
     if(type == 1){//如果是上面的药
         g_list_page.status = VIEW_DETAIL;
-        
+
         char *med1_name = medicine_sort_list[pagenum*2].name;
         char *med1_time = medicine_sort_list[pagenum*2].time;
         char *unit = medicine_sort_list[pagenum*2].unit;

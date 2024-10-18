@@ -553,6 +553,65 @@ static esp_err_t send_back_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
+
+esp_err_t json_post_handler(httpd_req_t *req) {
+    char content[req->content_len + 1];  // Buffer to hold incoming JSON data (adjust size as needed)
+    int ret, remaining = req->content_len;
+
+    // Read the incoming data
+    while (remaining > 0) {
+        if ((ret = httpd_req_recv(req, content, MIN(remaining, sizeof(content)))) <= 0) {
+            if (ret == HTTPD_SOCK_ERR_TIMEOUT) {
+                continue;  // Retry if timeout occurred
+            }
+            return ESP_FAIL;
+        }
+        remaining -= ret;
+    }
+
+    // Null-terminate the received data
+    content[req->content_len] = '\0';
+    // printf("Length of content:-==============%d",req->content_len);
+    // Parse JSON using cJSON
+    cJSON *json = cJSON_Parse(content);
+    // free(content);
+    
+    if (json == NULL) {
+        ESP_LOGE("JSON_POST", "Failed to parse JSON");
+        return ESP_FAIL;
+    }
+    printf("Received json: %s",cJSON_Print(json));
+    // cJSON *medicine_json = cJSON_GetObjectItem(json, "medicine");
+    // Extract specific fields from the JSON
+    cJSON *hour_json = cJSON_GetObjectItem(json, "hour");
+    cJSON *minute_json = cJSON_GetObjectItem(json, "minute");
+    cJSON *medicine_json = cJSON_GetObjectItem(json, "medicine");
+    update_system_time(cJSON_GetNumberValue(hour_json),cJSON_GetNumberValue(minute_json),0);
+    update_system_medicine(medicine_json);
+    // printf("Medicine json: %s", cJSON_Print(medicine_json));
+    // if ((minute_json->valueint != NULL)&&(hour_json->valueint != NULL)) {
+    //     update_system_time(cJSON_GetNumberValue(hour_json),cJSON_GetNumberValue(minute_json),0);
+    // }else{
+    //     return ESP_FAIL;
+    // }
+    // if (medicine_json->valuestring != NULL) {
+    //     update_system_medicine(medicine_json);
+    // }else{
+    //     return ESP_FAIL;
+    // }
+    // printf("Received Medicine Info: %s", cJSON_Print(medicine_json));
+
+    // Clean up
+    // cJSON_Delete(json);
+    // cJSON_Delete(hour_json);
+    // cJSON_Delete(minute_json);
+    // cJSON_Delete(medicine_json);
+    // Send response
+    const char resp[] = "JSON received and processed";
+    httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
+    return ESP_OK;
+}
+
 /* Function to start the file server */
 esp_err_t start_file_server(const char *base_path)
 {
@@ -645,6 +704,22 @@ esp_err_t start_file_server(const char *base_path)
         .user_ctx  = server_data    // Pass server data as context
     };
     httpd_register_uri_handler(server, &back_data);
+
+    httpd_uri_t json_post_uri = {
+        .uri       = "/store_json",   // URI to handle
+        .method    = HTTP_POST,
+        .handler   = json_post_handler,
+        .user_ctx  = server_data
+    };
+
+    // Register the new POST handler
+    // httpd_register_uri_handler(server, &json_post_uri);
+
+    if (httpd_register_uri_handler(server, &json_post_uri) == ESP_OK) {
+        ESP_LOGI("HTTP_SERVER", "/store_json handler registered successfully");
+    } else {
+        ESP_LOGE("HTTP_SERVER", "Failed to register /store_json handler");
+    }
 
     return ESP_OK;
 }

@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/CMakeFiles/bootloader
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/CMakeFiles/bootloader.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/CMakeFiles/bootloader-complete.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/CMakeFiles/bootloader
+/Users/sunzeyuan/Downloads/MedMinder/build/CMakeFiles/bootloader.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/CMakeFiles/bootloader-complete.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/sunzeyuan/Downloads/MedMinder/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

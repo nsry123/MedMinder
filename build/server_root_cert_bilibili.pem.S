@@ -1,4 +1,4 @@
-/* * Data converted from /Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/main/server_root_cert_bilibili.pem
+/* * Data converted from /Users/sunzeyuan/Downloads/MedMinder/main/server_root_cert_bilibili.pem
  * (null byte appended)
  */
 .data

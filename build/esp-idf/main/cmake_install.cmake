@@ -1,4 +1,4 @@
-# Install script for directory: /Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/main
+# Install script for directory: /Users/sunzeyuan/Downloads/MedMinder/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

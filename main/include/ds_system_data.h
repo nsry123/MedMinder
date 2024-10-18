@@ -104,9 +104,11 @@ typedef struct
 void ds_system_data_init(void);
 SYSTRM_DATA_T get_system_data(void);
 
+
 //////////////////WIFI INFO MANAGE //////////////////////////////
 void set_system_data_wifi_info(char * p_ssid,char *p_psw);
 void print_system_data_wifi_info(void);
+void update_system_medicine(cJSON* medicine);
 bool has_wifi_info(void);
 
 //////////////////NET STATUS/////////////////////////////////////

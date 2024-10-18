@@ -41,6 +41,10 @@ cJSON *create_medicine(char *name, char *unit, int dose_per_time,
   return medicine_json;
 }
 
+void ds_update_medicine_info(cJSON *medicine_json){
+    g_system_data.medicine_json = medicine_json;
+}
+
 
 void ds_system_data_init(){
     memset(&g_system_data,0,sizeof(SYSTRM_DATA_T));
@@ -51,23 +55,24 @@ void ds_system_data_init(){
     g_system_data.minute = 10;
     cJSON* medicine_list = cJSON_CreateArray();
     char* times_list[] = {
-        "10:00",
-        "11:00",
+        "10:11",
+        "12:10",
         "12:00"
     };
 
-    cJSON* medicine = create_medicine("阿司匹林","片",3,3,"无禁忌",times_list,3);
-    cJSON_AddItemToArray(medicine_list,medicine);
-    medicine = create_medicine("阿司匹","片",2,3,"无禁忌",times_list,3);
-    cJSON_AddItemToArray(medicine_list,medicine);
-    medicine = create_medicine("阿司林","片",1,3,"无禁忌",times_list,3);
-    cJSON_AddItemToArray(medicine_list,medicine);
-    medicine = create_medicine("阿司","片",4,3,"000禁忌",times_list,3);
-    cJSON_AddItemToArray(medicine_list,medicine);
+    // cJSON* medicine = create_medicine("阿司匹林","片",3,3,"无禁忌",times_list,3);
+    // cJSON_AddItemToArray(medicine_list,medicine);
+    // medicine = create_medicine("阿司匹","片",2,3,"无禁忌",times_list,3);
+    // cJSON_AddItemToArray(medicine_list,medicine);
+    // medicine = create_medicine("阿司林","片",1,3,"无禁忌",times_list,3);
+    // cJSON_AddItemToArray(medicine_list,medicine);
+    // medicine = create_medicine("阿司","片",4,3,"000禁忌",times_list,3);
+    // cJSON_AddItemToArray(medicine_list,medicine);
 
-    g_system_data.medicine_json = medicine_list;
-    char* stringg = cJSON_Print(medicine_list);
-    // printf("AAAAAAAAAAAAAAAAA-------------------%s----------------AAAAAAAAAAAAAAAAAA", stringg);
+    // g_system_data.medicine_json = medicine_list;
+    // char* stringg = cJSON_Print(medicine_list);
+    // ESP_LOGI("JSON_POST", "Example String: %s", stringg);
+    // printf("AAAAAAAAAAAAAAAAA-------------------%s----------------AAAAAAAAAAAAAAAAAA\n", stringg);
 }
 
 
@@ -312,6 +317,11 @@ void count_tp_wackup_timeleft(){
 
 uint32_t get_tp_wackup_timeleft(){
     return g_system_data.tp_wackup_timeleft;
+}
+
+void update_system_medicine(cJSON* medicine){
+    g_system_data.medicine_json = medicine;
+    // ESP_LOGI(TAG,"update system medicine information: %s",cJSON_Print(medicine));
 }
 
 void update_system_time(uint8_t hour,uint8_t minute,uint8_t second){

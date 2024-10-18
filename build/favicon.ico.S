@@ -1,4 +1,4 @@
-/* * Data converted from /Users/sunzeyuan/Downloads/DesktopScreenV4.0 2.3/main/favicon.ico
+/* * Data converted from /Users/sunzeyuan/Downloads/MedMinder/main/favicon.ico
  */
 .data
 .section .rodata.embedded
