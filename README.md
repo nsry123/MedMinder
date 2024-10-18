@@ -1,3 +1,8 @@
+##MedMinder
+During many interviews with Chinese senior citizens, many reported that they find a physical device specifically designed for medical notifications more reliable and desirable. Based on this feedback, I am developing a physical intake notifier using ESP32 that can synchronize with the application by simply scanning a QR code. The MedMinder work in cooperatioon with the [MedBox application](https://github.com/nsry123/MedBox), and can be synchronised with ease. Alarms and notifications will be significantly more reliably delivered than phone application, providing users with a more concrete experience.
+
+
+
 ## QuickStart
 
 1. Clone this repository
