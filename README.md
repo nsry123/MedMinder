@@ -4,7 +4,7 @@ During many interviews with Chinese senior citizens, many reported that they fin
 The following are screenshots of the UI layout:
 
 <div class="main">
-    <img src="https://github.com/nsry123/MedMinder/blob/main/images/%E4%B8%BB%E9%A1%B5.webp" width="300" padding_right = "20"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E5%88%97%E8%A1%A8.webp" width="300" padding_right = "20"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E8%AF%A6%E6%83%85.webp" width="300" padding_right = "20"/>
+    <img src="https://github.com/nsry123/MedMinder/blob/main/images/%E4%B8%BB%E9%A1%B5.webp" width="300" style="margin-right: 10px;"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E5%88%97%E8%A1%A8.webp" width="300" style="margin-right: 10px;"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E8%AF%A6%E6%83%85.webp" width="300" style="margin-right: 10px;"/>
 </div>
 
 ## QuickStart
