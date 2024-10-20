@@ -1,10 +1,10 @@
-[中文](https://github.com/nsry123/MedMinder/main/README_CN.md) [English](https://github.com/nsry123/MedMinder/main/README.md)
+[中文](https://github.com/nsry123/MedMinder/blob/main/README_CN.md) [English](https://github.com/nsry123/MedMinder/blob/main/README.md) 
 ## MedMinder
 During many interviews with Chinese senior citizens, many reported that they find a physical device specifically designed for medical notifications more reliable and desirable. Based on this feedback, I am developing a physical intake notifier using ESP32 that can synchronize with the application by simply scanning a QR code. The MedMinder work in cooperatioon with the [MedBox application](https://github.com/nsry123/MedBox), and can be synchronised with ease. Alarms and notifications will be significantly more reliably delivered than phone application, providing users with a more concrete experience.
 The following are screenshots of the UI layout:
 
 <div class="main">
-    <img src="https://github.com/nsry123/MedMinder/blob/main/images/%E4%B8%BB%E9%A1%B5.webp" width="300" style="margin-right: 10px;"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E5%88%97%E8%A1%A8.webp" width="300" style="margin-right: 10px;"/><img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E8%AF%A6%E6%83%85.webp" width="300" style="margin-right: 10px;"/>
+    <img src="https://github.com/nsry123/MedMinder/blob/main/images/%E4%B8%BB%E9%A1%B5.webp" width="300"/>&nbsp&nbsp<img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E5%88%97%E8%A1%A8.webp" width="300"/>&nbsp&nbsp<img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E8%AF%A6%E6%83%85.webp" width="300"/>
 </div>
 
 ## QuickStart
