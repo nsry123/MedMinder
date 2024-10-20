@@ -1,14 +1,11 @@
 [中文](https://github.com/nsry123/MedMinder/blob/main/README_CN.md) [English](https://github.com/nsry123/MedMinder/blob/main/README.md) 
 ## MedMinder
-在对身边老人的采访当中, 相较于MedBox App, 许多人更喜欢一款独立于App的用药提醒设备。基于这一反馈，我使用ESP32开发了一个物理用药提醒器，只需扫描二维码即可与[MedBox](https://github.com/nsry123/MedBox)应用程序同步。警报和通知将比手机应用通知更可靠地传递，为老年人用户提供更稳定和放心的体验。
+在对身边老人的采访当中, 相较于仅使用App, 许多人更喜欢一款App之外的便携用药提醒设备。基于这一反馈，我使用ESP32开发了一个物理用药提醒器，只需扫描二维码即可与[MedBox](https://github.com/nsry123/MedBox)应用程序同步。警报和通知将比手机应用通知更可靠地传递，为老年人用户提供更稳定和放心的体验。
 
 ## UI设计
 <div class="main">
     <img src="https://github.com/nsry123/MedMinder/blob/main/images/%E4%B8%BB%E9%A1%B5.webp" width="300"/>&nbsp&nbsp<img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E5%88%97%E8%A1%A8.webp" width="300"/>&nbsp&nbsp<img src="https://github.com/nsry123/MedMinder/blob/main/images/%E8%8D%AF%E5%93%81%E8%AF%A6%E6%83%85.webp" width="300"/>
 </div>
-
-
-
 
 ## 快速开始
 
